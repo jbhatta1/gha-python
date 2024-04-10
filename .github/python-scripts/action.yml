@@ -16,9 +16,9 @@ runs:
     - uses: actions/setup-python@v5
       with:
         python-version: '3.10'
-#    - name: Pass inputs to shell
-#      run: echo "INPUT_NUM=${{ inputs.num }}" >> $GITHUB_ENV
-#      shell: bash
+    - name: Pass inputs to shell
+      run: echo "INPUT_NUM=${{ inputs.num }}" >> $GITHUB_ENV
+      shell: bash
     - name: Fetch the number's square
       id: get-square
       run: python get_num_squared.py
