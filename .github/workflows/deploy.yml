@@ -6,3 +6,10 @@ jobs:
     steps:
       - name: Deploy job
         run: echo "Deploying"
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Fetch number squared
+        id: get-square
+        uses: ./.github/python-scripts
+        with:
+          num: 11
