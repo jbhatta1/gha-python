@@ -1,0 +1,8 @@
+name: Deploy workflow
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy job
+        run: echo "Deploying"
