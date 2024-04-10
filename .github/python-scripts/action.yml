@@ -31,9 +31,9 @@ runs:
     - name: Pass inputs to shell
       run: |
         echo "INPUT_NUM=${{ inputs.num }}" >> $GITHUB_ENV
-        echo "FIRST_NUM=${{ inputs.first_num }}"
-        echo "SECOND_NUM=${{ inputs.second_num }}"
-        echo "FUNC_NEEDED=${{ inputs.func_needed }}"
+        echo "FIRST_NUM=${{ inputs.first_num }}" >> $GITHUB_ENV
+        echo "SECOND_NUM=${{ inputs.second_num }}" >> $GITHUB_ENV
+        echo "FUNC_NEEDED=${{ inputs.func_needed }}" >> $GITHUB_ENV
       shell: bash
     - name: Fetch the number's square
       id: get-square
