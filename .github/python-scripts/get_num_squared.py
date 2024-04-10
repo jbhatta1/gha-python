@@ -1,9 +1,15 @@
-print("Hello world!")
+# src/get_num_square.py
 import os
 
-input_num = int(os.environ.get("INPUT_NUM"))
-print(f"Input number provided {input_num}")
-def square(num):
-    return num * num
+# get the input and convert it to int
+num = os.environ.get("INPUT_NUM")
+if num:
+    try:
+        num = int(num)
+    except Exception:
+        exit('ERROR: the INPUT_NUM provided ("{}") is not an integer'.format(num))
+else:
+    num = 1
 
-print(square(input_num))
+# to set output, print to shell in following syntax
+print(f"::set-output name=num_squared::{num ** 2}")
