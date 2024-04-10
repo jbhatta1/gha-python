@@ -12,4 +12,4 @@ jobs:
         id: get-square
         uses: ./.github/python-scripts
         with:
-          num: 11
+          num: "11"
