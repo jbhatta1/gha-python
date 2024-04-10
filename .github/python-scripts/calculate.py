@@ -20,4 +20,5 @@ def divide(n1, n2):
 def calculate(n1, n2, func):
   return func(n1, n2)
 
-print(f"{input_FIRST_num} {func_needed} {input_SECOND_num} = {calculate(input_FIRST_num, input_SECOND_num, func_needed)}")
+# print(f"{input_FIRST_num} {func_needed} {input_SECOND_num} = {calculate(input_FIRST_num, input_SECOND_num, func_needed)}")
+print(f"{input_FIRST_num} {func_needed} {input_SECOND_num}}")
