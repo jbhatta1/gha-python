@@ -13,3 +13,10 @@ jobs:
         uses: ./.github/python-scripts
         with:
           num: "11"
+      - name: Calculate
+        id: calculate
+        uses: ./.github/python-scripts
+        with:
+          first_num: "11"
+          second_num: "200"
+          func_needed: "multiply"

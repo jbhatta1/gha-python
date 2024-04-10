@@ -5,6 +5,18 @@ inputs:
     description: 'Enter a number'
     required: true
     default: "1"
+  first_num:
+    description: 'Enter first number'
+    required: true
+    default: "1"
+  second_num:
+    description: 'Enter second number'
+    required: true
+    default: "1"
+  func_needed:
+    description: 'Enter function'
+    required: true
+    default: "add"
 outputs:
   num-squared:
     description: 'Square of the input'
@@ -17,9 +29,17 @@ runs:
       with:
         python-version: '3.10'
     - name: Pass inputs to shell
-      run: echo "INPUT_NUM=${{ inputs.num }}" >> $GITHUB_ENV
+      run: |
+        echo "INPUT_NUM=${{ inputs.num }}" >> $GITHUB_ENV
+        echo "FIRST_NUM=${{ inputs.first_num }}"
+        echo "SECOND_NUM=${{ inputs.second_num }}"
+        echo "FUNC_NEEDED=${{ inputs.func_needed }}"
       shell: bash
     - name: Fetch the number's square
       id: get-square
       run: python ./.github/python-scripts/get_num_squared.py
+      shell: bash
+    - name: Calculate
+      id: calculate
+      run: python ./.github/python-scripts/calculate.py
       shell: bash
