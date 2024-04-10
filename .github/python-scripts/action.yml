@@ -3,19 +3,19 @@ description: 'A GitHub Action that takes an input and returns the square of the 
 inputs:
   num:
     description: 'Enter a number'
-    required: true
+    required: false
     default: "1"
   first_num:
     description: 'Enter first number'
-    required: true
+    required: false
     default: "1"
   second_num:
     description: 'Enter second number'
-    required: true
+    required: false
     default: "1"
   func_needed:
     description: 'Enter function'
-    required: true
+    required: false
     default: "add"
 outputs:
   num-squared:
